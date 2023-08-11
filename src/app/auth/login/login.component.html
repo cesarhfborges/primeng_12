@@ -1,1 +1,46 @@
-<p>login works!</p>
+<div class="row h-100 d-flex align-items-center justify-content-center">
+    <div class="col-12 col-lg-6">
+        <p-card>
+            <ng-template pTemplate="header">
+                <p-image
+                        src="https://w7.pngwing.com/pngs/475/488/png-transparent-logo-mobile-application-testing-mobile-cloud-computing-mobile-phones-software-testing-portal-logo-text-logo-logo-vector.png"
+                        alt="Image" width="250"></p-image>
+            </ng-template>
+
+            <div class="p-fluid">
+                <div class="p-field">
+                    <label for="email">E-Mail:</label>
+                    <div class="p-inputgroup">
+                        <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
+                        <input id="email" type="text" pInputText placeholder="ex: carlos@gmail.com">
+                    </div>
+                </div>
+                <div class="p-field">
+                    <label for="password">Senha:</label>
+                    <div class="p-inputgroup">
+                        <span class="p-inputgroup-addon"><i class="pi pi-key"></i></span>
+                        <input id="password" type="password" pInputText placeholder="Keyword">
+                    </div>
+                </div>
+            </div>
+
+
+            <ng-template pTemplate="footer">
+                <div class="row">
+                    <div class="col-12 mb-2">
+                        <p-button
+                                label="Login"
+                                styleClass="p-button-fullWidth p-button-success"
+                        ></p-button>
+                    </div>
+                    <div class="col-12">
+                        <p-button
+                                label="Esqueci a senha"
+                                styleClass="p-button-fullWidth p-button-text p-button-warning"
+                        ></p-button>
+                    </div>
+                </div>
+            </ng-template>
+        </p-card>
+    </div>
+</div>

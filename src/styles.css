@@ -6,3 +6,7 @@ body {
 .p-dropdown-panel .p-dropdown-items .p-dropdown-item {
   /*text-align: right;*/
 }
+
+.p-button-fullWidth {
+  width:100%
+}

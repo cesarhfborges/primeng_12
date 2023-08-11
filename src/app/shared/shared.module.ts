@@ -7,11 +7,19 @@ import {RadioButtonModule} from 'primeng/radiobutton';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
+import {CardModule} from 'primeng/card';
+import {ButtonModule} from 'primeng/button';
+import {ImageModule} from 'primeng/image';
+import {RippleModule} from 'primeng/ripple';
 
 const PRIME_COMPONENTS = [
     InputSwitchModule,
     InputTextModule,
     RadioButtonModule,
+    CardModule,
+    ButtonModule,
+    ImageModule,
+    RippleModule
 ];
 
 @NgModule({
