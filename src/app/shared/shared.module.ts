@@ -4,13 +4,14 @@ import {BaseLayoutComponent} from './layouts/base-layout/base-layout.component';
 import {InputSwitchModule} from 'primeng/inputswitch';
 import {InputTextModule} from 'primeng/inputtext';
 import {RadioButtonModule} from 'primeng/radiobutton';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
 import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {ImageModule} from 'primeng/image';
 import {RippleModule} from 'primeng/ripple';
+import {CheckboxModule} from 'primeng/checkbox';
 
 const PRIME_COMPONENTS = [
     InputSwitchModule,
@@ -19,7 +20,8 @@ const PRIME_COMPONENTS = [
     CardModule,
     ButtonModule,
     ImageModule,
-    RippleModule
+    RippleModule,
+    CheckboxModule
 ];
 
 @NgModule({
@@ -29,11 +31,14 @@ const PRIME_COMPONENTS = [
     ],
     imports: [
         CommonModule,
+        FormsModule,
         ReactiveFormsModule,
         RouterModule,
         ...PRIME_COMPONENTS
     ],
     exports: [
+        FormsModule,
+        ReactiveFormsModule,
         ...PRIME_COMPONENTS
     ]
 })

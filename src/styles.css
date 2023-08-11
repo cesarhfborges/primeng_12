@@ -10,3 +10,13 @@ body {
 .p-button-fullWidth {
   width:100%
 }
+
+label {
+  margin-bottom: unset;
+}
+
+.ng-invalid {
+  &.ng-touched {
+    border-color: #f44336;
+  }
+}
