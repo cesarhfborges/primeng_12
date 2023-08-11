@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
         this.stateOptions = [{label: 'pt-BR', value: 'pt-BR'}, {label: 'en-US', value: 'en-US'}];
     }
 
-    ngOnInit() {
+    ngOnInit(): void {
     }
 
     get language(): string {
