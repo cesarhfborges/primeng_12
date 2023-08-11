@@ -5,22 +5,16 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 
-import {DropdownModule} from 'primeng/dropdown';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from './app-routing.module';
 import {SharedModule} from './shared/shared.module';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-
-export function createTranslateLoader(http: HttpClient) {
-    return new TranslateHttpLoader(http, './assets/i18n/', '.json');
-}
+import {translateLoader} from './shared/translate/translate-loader';
 
 @NgModule({
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
-        DropdownModule,
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
@@ -28,7 +22,7 @@ export function createTranslateLoader(http: HttpClient) {
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
-                useFactory: (createTranslateLoader),
+                useFactory: (translateLoader),
                 deps: [HttpClient],
             },
             defaultLanguage: 'pt-BR',
