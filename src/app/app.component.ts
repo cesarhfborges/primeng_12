@@ -8,19 +8,8 @@ import {DialogService} from 'primeng/dynamicdialog';
     providers: [DialogService, MessageService],
 })
 export class AppComponent {
-    cities: any[];
-    city: any = null;
-
-    constructor(
-        public dialogService: DialogService,
-        public messageService: MessageService
-    ) {
-        this.cities = [
-            {name: 'New York', code: 'NY'},
-            {name: 'Rome', code: 'RM'},
-            {name: 'London', code: 'LDN'},
-            {name: 'Istanbul', code: 'IST'},
-            {name: 'Paris', code: 'PRS'},
-        ];
+    constructor() {
     }
+
+
 }

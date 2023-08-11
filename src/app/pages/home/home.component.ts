@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
     selector: 'app-home',
@@ -7,10 +8,26 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+    stateOptions: any[];
 
-    constructor() {
+    constructor(
+        private translateService: TranslateService
+    ) {
+        this.stateOptions = [{label: 'pt-BR', value: 'pt-BR'}, {label: 'en-US', value: 'en-US'}];
     }
 
     ngOnInit() {
+    }
+
+    public changeLanguage(language: string): void {
+        this.translateService.use(language);
+    }
+
+    get language(): string {
+        return this.translateService.currentLang;
+    }
+
+    set language(value: string) {
+        this.translateService.use(value);
     }
 }
