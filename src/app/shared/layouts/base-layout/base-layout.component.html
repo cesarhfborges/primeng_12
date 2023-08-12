@@ -1,10 +1,27 @@
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12">
-            <p>base-layout works!</p>
-        </div>
-        <div class="col-12">
-            <router-outlet></router-outlet>
+<div class="layout-wrapper">
+    <app-top-bar></app-top-bar>
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <app-side-bar></app-side-bar>
+
+            <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+<!--                <div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>-->
+                <router-outlet></router-outlet>
+            </main>
         </div>
     </div>
+
+<!--    <div class="layout-sidebar">-->
+<!--        <app-side-bar></app-side-bar>-->
+<!--    </div>-->
+<!--    <div class="layout-main-container">-->
+<!--        <div class="layout-main">-->
+<!--            <router-outlet></router-outlet>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <app-footer></app-footer>-->
+<!--    <app-config></app-config>-->
+<!--    <div class="layout-mask"></div>-->
 </div>

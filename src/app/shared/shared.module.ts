@@ -1,13 +1,14 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {BaseLayoutComponent} from './layouts/base-layout/base-layout.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {AuthLayoutComponent, BaseLayoutComponent} from './layouts';
+import {FooterComponent, SideBarComponent, TopBarComponent} from './layouts/base-layout/components';
+
+import {CardModule} from 'primeng/card';
 import {InputSwitchModule} from 'primeng/inputswitch';
 import {InputTextModule} from 'primeng/inputtext';
 import {RadioButtonModule} from 'primeng/radiobutton';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {RouterModule} from '@angular/router';
-import { AuthLayoutComponent } from './layouts/auth-layout/auth-layout.component';
-import {CardModule} from 'primeng/card';
 import {ButtonModule} from 'primeng/button';
 import {ImageModule} from 'primeng/image';
 import {RippleModule} from 'primeng/ripple';
@@ -41,7 +42,10 @@ const PRIME_COMPONENTS = [
 @NgModule({
     declarations: [
         BaseLayoutComponent,
-        AuthLayoutComponent
+        AuthLayoutComponent,
+        TopBarComponent,
+        SideBarComponent,
+        FooterComponent
     ],
     imports: [
         CommonModule,
