@@ -15,6 +15,7 @@
                         <div class="p-inputgroup">
                             <span class="p-inputgroup-addon"><i class="pi pi-envelope"></i></span>
                             <input
+                                    #inputEmail
                                     formControlName="email"
                                     id="email"
                                     pInputText
@@ -54,12 +55,14 @@
                                     label="Login"
                                     pButton
                                     type="submit"
+                                    [disabled]="form.disabled"
                             ></button>
                         </div>
                         <div class="col-12">
                             <p-button
                                     label="Esqueci minha senha"
                                     styleClass="p-button-fullWidth p-button-text p-button-warning"
+                                    [disabled]="form.disabled"
                             ></p-button>
                         </div>
                     </div>

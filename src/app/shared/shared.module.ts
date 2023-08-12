@@ -14,6 +14,7 @@ import {RippleModule} from 'primeng/ripple';
 import {CheckboxModule} from 'primeng/checkbox';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import {TranslateModule} from '@ngx-translate/core';
+import {ToastModule} from 'primeng/toast';
 
 const PRIME_COMPONENTS = [
     InputSwitchModule,
@@ -25,7 +26,8 @@ const PRIME_COMPONENTS = [
     RippleModule,
     CheckboxModule,
     SelectButtonModule,
-    TranslateModule
+    TranslateModule,
+    ToastModule
 ];
 
 @NgModule({
