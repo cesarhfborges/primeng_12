@@ -15,6 +15,11 @@ import {CheckboxModule} from 'primeng/checkbox';
 import {SelectButtonModule} from 'primeng/selectbutton';
 import {TranslateModule} from '@ngx-translate/core';
 import {ToastModule} from 'primeng/toast';
+import {MessageModule} from 'primeng/message';
+import {DialogModule} from 'primeng/dialog';
+import {MessagesModule} from 'primeng/messages';
+import {MessageService} from 'primeng/api';
+import {DialogService} from 'primeng/dynamicdialog';
 
 const PRIME_COMPONENTS = [
     InputSwitchModule,
@@ -27,7 +32,10 @@ const PRIME_COMPONENTS = [
     CheckboxModule,
     SelectButtonModule,
     TranslateModule,
-    ToastModule
+    ToastModule,
+    MessageModule,
+    MessagesModule,
+    DialogModule
 ];
 
 @NgModule({
@@ -46,6 +54,10 @@ const PRIME_COMPONENTS = [
         FormsModule,
         ReactiveFormsModule,
         ...PRIME_COMPONENTS
+    ],
+    providers: [
+        MessageService,
+        DialogService
     ]
 })
 export class SharedModule {
