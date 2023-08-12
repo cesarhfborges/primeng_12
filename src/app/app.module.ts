@@ -10,6 +10,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {SharedModule} from './shared/shared.module';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {translateLoader} from './shared/translate/translate-loader';
+import {CoreModule} from './core/core.module';
 
 @NgModule({
     imports: [
@@ -27,6 +28,7 @@ import {translateLoader} from './shared/translate/translate-loader';
             },
             defaultLanguage: 'pt-BR',
         }),
+        CoreModule,
         SharedModule,
     ],
     declarations: [AppComponent],

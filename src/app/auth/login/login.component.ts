@@ -2,8 +2,7 @@ import {Component, ElementRef, OnInit, ViewChild, ViewChildren} from '@angular/c
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {MessageService} from 'primeng/api';
-import {AuthService} from '../../core/services/auth.service';
-import {InputText} from 'primeng/inputtext';
+import {AuthService} from '../../core/services';
 
 @Component({
     selector: 'app-login',
@@ -36,7 +35,7 @@ export class LoginComponent implements OnInit {
         if (this.form.valid) {
             this.form.disable();
             this.authService.login(this.form.value).subscribe({
-                next: () => {
+                next: (response: any) => {
                     this.form.enable();
                     this.router.navigate(['/home']).catch();
                 },
